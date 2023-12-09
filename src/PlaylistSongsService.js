@@ -13,9 +13,9 @@ class PlaylistSongsService {
             values: [playlistId],
         };
 
-        const songs = await this._pool.query(query);
+        const result = await this._pool.query(query);
 
-        return songs.rows;
+        return result.rows;
     }
 }
 
